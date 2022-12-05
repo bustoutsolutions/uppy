@@ -58,17 +58,17 @@ export default {
   },
   render (...args) {
     // Hack to allow support for Vue 2 and 3
-    if (isVue2(...args)) {
+    // if (isVue2(...args)) {
       // If it's first argument is a function, then it's a Vue 2 App
       const [createElement] = args
       return createElement('div', {
         ref: 'container',
       })
-    }
+    // }
 
     // Otherwise, we import the `h` function from the Vue package (in Vue 3 fashion)
-    return Vue.h('div', {
-      ref: 'container',
-    })
+    // return Vue.h('div', {
+    //   ref: 'container',
+    // })
   },
 }
